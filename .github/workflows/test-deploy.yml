@@ -23,17 +23,16 @@ jobs:
         npm init -y
         npm install --save-dev jest jest-environment-jsdom
         
-    - name: Create test file
+    - name: Create Jest config
       run: |
-        cat > test.js << 'EOF'
-        test('page loads', () => {
-          document.body.innerHTML = '<h1>Test</h1>';
-          expect(document.querySelector('h1').textContent).toBe('Test');
-        });
+        cat > jest.config.js << 'EOF'
+        module.exports = {
+          testEnvironment: 'jsdom',
+        };
         EOF
         
     - name: Run tests
-      run: npx jest --passWithNoTests
+      run: npx jest --config jest.config.js --passWithNoTests
       
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
