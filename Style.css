@@ -1,8 +1,8 @@
 body {
-    background-color: navy;
+    background-color: white;
 }
 :root {
-  --scale: 3;
+  --scale: 2;
 }
 
 #home h1 { 
