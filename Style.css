@@ -1,0 +1,19 @@
+body {
+    background-color: navy;
+}
+:root {
+  --scale: 3;
+}
+
+#home h1 { 
+    font-size: calc(2.5rem * var(--scale)); 
+    color:#0057B7;
+}
+#home h2 { 
+    font-size: calc(2rem * var(--scale));
+    color:#FFD700;
+}
+#home p { 
+    font-size: calc(1rem * var(--scale)); 
+    color: skyblue;
+}

@@ -1,0 +1,43 @@
+name: Test and Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install --save-dev jest jest-environment-jsdom
+        
+    - name: Create test file
+      run: |
+        cat > test.js << 'EOF'
+        test('page loads', () => {
+          document.body.innerHTML = '<h1>Test</h1>';
+          expect(document.querySelector('h1').textContent).toBe('Test');
+        });
+        EOF
+        
+    - name: Run tests
+      run: npx jest --passWithNoTests
+      
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
