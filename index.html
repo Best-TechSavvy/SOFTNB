@@ -5,14 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="logo.png">
         <title>Story Of Flight: The New Beginning</title>
-        <script src="Script.js"></script>
-        <link rel="stylesheet" href="Style.css">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container" id="home">
-            <h2>Story Of Flight:</h2>
-            <h1>The New<br>Beginning</h1>
-            <p><b>By Kirill and Mustafa</b></p>
-        </div>
+        <section class="container home" id="home">
+            <div class="home-left">
+                <img class="home-logo" src="logo.png" alt="Story of Flight Logo">
+            </div>
+            <div class="home-right">
+                <h2 class="home-subtitle">Story of Flight</h2>
+                <h1 class="home-title">The New<br>Beginning</h1>
+                <p class="home-author">By Kirill and Mustafa</p>
+            </div>
+        </section>
+        <nav class="navbar">
+            <button class="nav-btn" id="back" aria-label="Previous slide">
+                <img src="back.png" alt="Back">
+            </button>
+
+            <button class="nav-btn" id="nav-home" aria-label="Home">
+                <img src="home.png" alt="Home">
+            </button>
+
+            <button class="nav-btn" id="next" aria-label="Next slide">
+                <img src="next.png" alt="Next">
+            </button>
+        </nav>
     </body>
 </html>
