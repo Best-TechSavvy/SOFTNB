@@ -4,25 +4,37 @@ body {
 
 :root {
     --scale: 2;
-    --navbar-height: 50px;
+    --navbar-height: 80px;
     --primary: #FFD700;
     --secondary: #0057B7;
     --sub: #5A32B5;
     --back: #0E967F;
 }
 
+
+/* ===== SLIDE BASE ===== */
+.slide {
+  display: none;
+
+  height: calc(100vh - var(--navbar-height));
+  box-sizing: border-box;
+}
+
+
+/* ===== SLIDE VISIBILITY ===== */
+.slide.active {
+  display: flex;
+}
+
 /* ===== HOME SLIDE ===== */
 .home {
-  height: calc(100vh - var(--navbar-height));
   background-color: #0E967F;
 
-  display: flex;
   align-items: center;
   justify-content: center;
   gap: 4rem;
 
   padding: 3rem;
-  box-sizing: border-box;
 }
 
 /* Left (Logo) */
@@ -69,21 +81,67 @@ h1, h2, p {
   margin: 0;
 }
 
+/* ===== SLIDE 2 ===== */
+.slide-2 {
+  background-color: var(--primary);
+  color: var(--secondary);
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+.slide-2 h1 {
+  font-size: calc(2.5rem * var(--scale));
+}
+
+.slide-2 p {
+  font-size: calc(1.1rem * var(--scale));
+  opacity: 0.8;
+}
+
+/* ===== SLIDE 3 ===== */
+.slide-3 {
+  background-color: var(--back);
+  color: var(--sub);
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+.slide-3 h1 {
+  font-size: calc(2.5rem * var(--scale));
+}
+
+.slide-3 p {
+  font-size: calc(1.1rem * var(--scale));
+  opacity: 0.8;
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
   bottom: 0;
+  left: 0;
+
   width: 100%;
   height: var(--navbar-height);
+  box-sizing: border-box;
+  padding: 0;
 
-  background-color: var(--secondary);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 3rem;
 
-  padding: 0.75rem 0;
-  z-index: 1000;
+  background-color: var(--secondary);
 }
 
 /* Buttons */
