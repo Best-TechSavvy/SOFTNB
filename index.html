@@ -33,19 +33,28 @@
             <p>Placeholder content</p>
         </section>
 
-        <!-- Navigation bar -->
-        <nav class="navbar">
-            <button class="nav-btn" id="back" aria-label="Previous slide">
-                <img src="back.png" alt="Back">
-            </button>
+        <!-- Previous Button -->
+        <button class="side-btn prev" id="back" aria-label="Previous slide" title="Previous">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <!-- Example left arrow path -->
+                <path d="M15.5 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
 
-            <button class="nav-btn" id="nav-home" aria-label="Home">
-                <img src="home.png" alt="Home">
-            </button>
+        <!-- Next Button -->
+        <button class="side-btn next" id="next" aria-label="Next slide" title="Next">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <!-- Example right arrow path -->
+                <path d="M8.5 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
 
-            <button class="nav-btn" id="next" aria-label="Next slide">
-                <img src="next.png" alt="Next">
-            </button>
-        </nav>
+        <!-- Home Button -->
+        <button class="home-btn" id="nav-home" aria-label="Home" title="Home">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <!-- Example home icon path -->
+                <path d="M3 10.5l9-7 9 7V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10.5z" fill="currentColor"/>
+            </svg>
+        </button>
     </body>
 </html>
