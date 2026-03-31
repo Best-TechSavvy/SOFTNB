@@ -29,7 +29,22 @@ let currentSlide = 0;
 function showSlide(index) {
   slides.forEach(slide => slide.classList.remove("active"));
   slides[index].classList.add("active");
+
+  // Update button color based on current slide background
   updateButtonColor(slides[index]);
+
+  // ===== BUTTON VISIBILITY RULES =====
+  const isFirst = index === 0;
+  const isLast = index === slides.length - 1;
+
+  // Home hidden on home slide
+  homeBtn.classList.toggle("hidden", isFirst);
+
+  // Prev hidden if no slide before
+  backBtn.classList.toggle("hidden", isFirst);
+
+  // Next hidden if no slide after
+  nextBtn.classList.toggle("hidden", isLast);
 }
 
 // ===== NAVIGATION =====

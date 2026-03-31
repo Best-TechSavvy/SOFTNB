@@ -200,3 +200,7 @@ h1, h2, p {
   height: 40px;
   display: block;
 }
+
+.hidden {
+  display: none !important;
+}
