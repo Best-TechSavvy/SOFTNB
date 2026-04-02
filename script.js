@@ -1,9 +1,9 @@
 // ===== BUTTON COLOR LOGIC (define FIRST) =====
 const colorMap = {
-  "rgb(14, 150, 127)": "rgb(90, 50, 181)", // green → purple
-  "rgb(90, 50, 181)": "rgb(255, 215, 0)",  // purple → yellow
-  "rgb(255, 215, 0)": "rgb(0, 87, 183)",   // yellow → blue
-  "rgb(0, 87, 183)": "rgb(14, 150, 127)"   // blue → green
+  "rgb(14, 150, 127)": "rgb(0, 87, 183)", // green → purple
+  "rgb(0, 87, 183)": "rgb(255, 215, 0)",  // purple → yellow
+  "rgb(255, 215, 0)": "rgb(90, 50, 181)",   // yellow → blue
+  "rgb(90, 50, 181)": "rgb(14, 150, 127)"   // blue → green
 };
 
 function updateButtonColor(slide) {
