@@ -145,7 +145,7 @@ h1, h2, p {
 }
 
 .slide-4 p {
-  font-size: calc(1.1rem * var(--scale));
+  font-size: calc(1.1rem * 1.6);
   opacity: 0.8;
 }
 
