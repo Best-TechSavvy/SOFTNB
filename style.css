@@ -86,8 +86,9 @@ h1, h2, p {
 
 /* ===== SLIDE 2 ===== */
 .slide-2 {
-  background-color: var(--secondary);
-  color: var(--primary);
+  background-color: var(--sub);
+  color: var(--back);
+  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -129,9 +130,9 @@ h1, h2, p {
 
 /* ===== SLIDE 4 ===== */
 .slide-4 {
-  background-color: var(--sub);
-  color: var(--back);
-
+  background-color: var(--secondary);
+  color: var(--primary);
+  
   flex-direction: column;
   align-items: center;
   justify-content: center;
