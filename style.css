@@ -31,8 +31,8 @@ body {
 
 /* ===== HOME SLIDE ===== */
 .home {
-  background-color: #0E967F;
-
+  background-color: var(--back);
+  
   align-items: center;
   justify-content: center;
   gap: 4rem;
@@ -146,6 +146,72 @@ h1, h2, p {
 }
 
 .slide-4 p {
+  font-size: calc(1.1rem * var(--scale));
+  opacity: 0.8;
+}
+
+/* ===== SLIDE 5 ===== */
+.slide-5 {
+  background-color: var(--back);
+  color: var(--secondary);
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+  padding: 5rem;
+}
+
+.slide-5 h1 {
+  font-size: calc(2.5rem * var(--scale));
+}
+
+.slide-5 p {
+  font-size: calc(1.1rem * var(--scale));
+  opacity: 0.8;
+}
+
+/* ===== SLIDE 6 ===== */
+.slide-6 {
+  background-color: var(--primary);
+  color: var(--sub);
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+  padding: 5rem;
+}
+
+.slide-6 h1 {
+  font-size: calc(2.5rem * var(--scale));
+}
+
+.slide-6 p {
+  font-size: calc(1.1rem * var(--scale));
+  opacity: 0.8;
+}
+
+/* ===== SLIDE 7 ===== */
+.slide-7 {
+  background-color: var(--sub);
+  color: var(--back);
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+  padding: 5rem;
+}
+
+.slide-7 h1 {
+  font-size: calc(2.5rem * var(--scale));
+}
+
+.slide-7 p {
   font-size: calc(1.1rem * var(--scale));
   opacity: 0.8;
 }
