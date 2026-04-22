@@ -111,7 +111,6 @@ h1, h2, p {
   background-color: var(--primary);
   color: var(--sub);
 
-  flex-direction: row;
   align-items: center;
   justify-content: center;
 
@@ -124,6 +123,7 @@ h1, h2, p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1.5rem;
 }
 
 .slide-3 h1 {
