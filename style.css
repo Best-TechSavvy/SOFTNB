@@ -123,6 +123,10 @@ h1, h2, p {
   font-size: calc(2.5rem * var(--scale));
 }
 
+.slide-3 h2 {
+  font-size: calc(1.2rem * var(--scale));
+}
+
 .slide-3 p {
   font-size: calc(1.1rem * 1.6);
   opacity: 0.8;
