@@ -145,6 +145,10 @@ h1, h2, p {
   font-size: calc(2.5rem * var(--scale));
 }
 
+.slide-4 h2 {
+  font-size: calc(1.2rem * var(--scale));
+}
+
 .slide-4 p {
   font-size: calc(1.1rem * var(--scale));
   opacity: 0.8;
@@ -165,6 +169,10 @@ h1, h2, p {
 
 .slide-5 h1 {
   font-size: calc(2.5rem * var(--scale));
+}
+
+.slide-5 h2 {
+  font-size: calc(1.2rem * var(--scale));
 }
 
 .slide-5 p {
@@ -189,6 +197,10 @@ h1, h2, p {
   font-size: calc(2.5rem * var(--scale));
 }
 
+.slide-6 h2 {
+  font-size: calc(1.2rem * var(--scale));
+}
+
 .slide-6 p {
   font-size: calc(1.1rem * var(--scale));
   opacity: 0.8;
@@ -209,6 +221,10 @@ h1, h2, p {
 
 .slide-7 h1 {
   font-size: calc(2.5rem * var(--scale));
+}
+
+.slide-7 h2 {
+  font-size: calc(1.2rem * var(--scale));
 }
 
 .slide-7 p {
