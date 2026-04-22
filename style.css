@@ -111,7 +111,6 @@ h1, h2, p {
   background-color: var(--primary);
   color: var(--sub);
   
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
