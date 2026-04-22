@@ -128,7 +128,7 @@ h1, h2, p {
 }
 
 .slide-3 p {
-  font-size: calc(1.1rem * (var(--scale)-0.4));
+  font-size: calc(1.1rem * (var(--scale) - 0.4));
   opacity: 0.8;
 }
 
@@ -154,7 +154,7 @@ h1, h2, p {
 }
 
 .slide-4 p {
-  font-size: calc(1.1rem * (var(--scale)-0.4));
+  font-size: calc(1.1rem * (var(--scale) - 0.4));
   opacity: 0.8;
 }
 
