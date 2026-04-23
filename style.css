@@ -22,11 +22,24 @@ body {
   box-sizing: border-box;
 }
 
+
+.home,
+.slide-2,
 .slide-3,
 .slide-4,
 .slide-5 {
   filter: grayscale(100%);
 }
+
+/* "Hole" in the filter: keep images colorful */
+.home img,
+.slide-2 img,
+.slide-3 img,
+.slide-4 img,
+.slide-5 img {
+  filter: grayscale(0%);
+}
+
 
 /* ===== SLIDE VISIBILITY ===== */
 .slide.active {
