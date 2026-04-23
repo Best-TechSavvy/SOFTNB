@@ -22,7 +22,11 @@ body {
   box-sizing: border-box;
 }
 
-
+.slide-3,
+.slide-4,
+.slide-5 {
+  filter: grayscale(100%);
+}
 
 /* ===== SLIDE VISIBILITY ===== */
 .slide.active {
