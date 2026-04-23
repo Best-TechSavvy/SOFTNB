@@ -20,26 +20,8 @@ body {
   display: none;
   height: 100vh;
   box-sizing: border-box;
+  position: relative;
 }
-
-
-.home,
-.slide-2,
-.slide-3,
-.slide-4,
-.slide-5 {
-  filter: grayscale(100%);
-}
-
-/* "Hole" in the filter: keep images colorful */
-.home img,
-.slide-2 img,
-.slide-3 img,
-.slide-4 img,
-.slide-5 img {
-  filter: grayscale(0%);
-}
-
 
 /* ===== SLIDE VISIBILITY ===== */
 .slide.active {
@@ -348,3 +330,24 @@ h1, h2, p {
 .hidden {
   display: none !important;
 }
+
+.home img,
+.slide-2 img,
+.slide-3 img,
+.slide-4 img {
+  position: relative;
+  z-index: 2;
+}
+
+.home::after,
+.slide-2::after,
+.slide-3::after,
+.slide-4::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: grayscale(100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
