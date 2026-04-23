@@ -334,7 +334,8 @@ h1, h2, p {
 .home img,
 .slide-2 img,
 .slide-3 img,
-.slide-4 img {
+.slide-4 img
+.slide-5 img {
   position: relative;
   z-index: 2;
 }
@@ -342,7 +343,8 @@ h1, h2, p {
 .home::after,
 .slide-2::after,
 .slide-3::after,
-.slide-4::after {
+.slide-4::after
+.slide-5::after {
   content: "";
   position: absolute;
   inset: 0;
