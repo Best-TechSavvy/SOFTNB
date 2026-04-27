@@ -252,6 +252,137 @@ h1, h2, p {
   opacity: 0.8;
 }
 
+/* ===== SLIDE 8 ===== */
+.slide-8 {
+  background-color: var(--sub);
+  color: var(--back);
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+  padding: 5rem;
+}
+
+.slide-8 h1 {
+  font-size: calc(2.5rem * var(--scale));
+}
+
+.slide-8 h2 {
+  font-size: calc(1.2rem * var(--scale));
+}
+
+.slide-8 p {
+  font-size: calc(1.1rem * var(--scale));
+  opacity: 0.8;
+}
+
+/* ===== SLIDE 7 ===== */
+.slide-9 {
+  background-color: var(--sub);
+  color: var(--back);
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+  padding: 5rem;
+}
+
+.slide-9 h1 {
+  font-size: calc(2.5rem * var(--scale));
+}
+
+.slide-9 h2 {
+  font-size: calc(1.2rem * var(--scale));
+}
+
+.slide-9 p {
+  font-size: calc(1.1rem * var(--scale));
+  opacity: 0.8;
+}
+
+/* ===== SLIDE 7 ===== */
+.slide-10 {
+  background-color: var(--sub);
+  color: var(--back);
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+  padding: 5rem;
+}
+
+.slide-10 h1 {
+  font-size: calc(2.5rem * var(--scale));
+}
+
+.slide-10 h2 {
+  font-size: calc(1.2rem * var(--scale));
+}
+
+.slide-10 p {
+  font-size: calc(1.1rem * var(--scale));
+  opacity: 0.8;
+}
+
+/* ===== SLIDE 7 ===== */
+.slide-11 {
+  background-color: var(--sub);
+  color: var(--back);
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+  padding: 5rem;
+}
+
+.slide-11 h1 {
+  font-size: calc(2.5rem * var(--scale));
+}
+
+.slide-11 h2 {
+  font-size: calc(1.2rem * var(--scale));
+}
+
+.slide-11 p {
+  font-size: calc(1.1rem * var(--scale));
+  opacity: 0.8;
+}
+
+/* ===== SLIDE 7 ===== */
+.slide-12 {
+  background-color: var(--sub);
+  color: var(--back);
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+  padding: 5rem;
+}
+
+.slide-12 h1 {
+  font-size: calc(2.5rem * var(--scale));
+}
+
+.slide-12 h2 {
+  font-size: calc(1.2rem * var(--scale));
+}
+
+.slide-12 p {
+  font-size: calc(1.1rem * var(--scale));
+  opacity: 0.8;
+}
+
+
 /* border: solid 2px black; */
 
 /* ===== SIDE NAV BUTTONS ===== */
