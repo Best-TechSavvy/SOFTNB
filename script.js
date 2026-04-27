@@ -67,6 +67,7 @@ function prevSlide() {
 
 function goHome() {
   currentSlide = 0;
+  document.getElementByClass(id).style.filter = grayscale(gray%);
   showSlide(currentSlide);
 }
 
