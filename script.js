@@ -24,6 +24,7 @@ const nextBtn = document.getElementById("next");
 const homeBtn = document.getElementById("nav-home");
 
 let currentSlide = 0;
+let gray = 0;
 
 // ===== INIT / RENDER =====
 function showSlide(index) {
@@ -51,12 +52,16 @@ function showSlide(index) {
 function nextSlide() {
   if (currentSlide >= slides.length - 1) return;
   currentSlide++;
+  gray = gray + (100/slides.length);
+  document.getElementByClass(id).style.filter = grayscale(gray%);
   showSlide(currentSlide);
 }
 
 function prevSlide() {
   if (currentSlide <= 0) return;
   currentSlide--;
+  gray = gray - (100/slides.length);
+  document.getElementByClass(id).style.filter = grayscale(gray%);
   showSlide(currentSlide);
 }
 
