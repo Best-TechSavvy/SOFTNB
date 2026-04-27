@@ -53,7 +53,7 @@ function nextSlide() {
   if (currentSlide >= slides.length - 1) return;
   currentSlide++;
   gray = gray + (100/slides.length);
-  document.getElementByClass(id).style.filter = grayscale(gray%);
+  slides[index].style.filter = grayscale(gray%);
   showSlide(currentSlide);
 }
 
@@ -61,13 +61,13 @@ function prevSlide() {
   if (currentSlide <= 0) return;
   currentSlide--;
   gray = gray - (100/slides.length);
-  document.getElementByClass(id).style.filter = grayscale(gray%);
+  slides[index].style.filter = grayscale(gray%);
   showSlide(currentSlide);
 }
 
 function goHome() {
   currentSlide = 0;
-  document.getElementByClass(id).style.filter = grayscale(gray%);
+  slides[index].style.filter = grayscale(gray%);
   showSlide(currentSlide);
 }
 
