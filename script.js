@@ -24,7 +24,7 @@ const nextBtn = document.getElementById("next");
 const homeBtn = document.getElementById("nav-home");
 
 let currentSlide = 0;
-let gray = 0;
+let gray = 100;
 
 // ===== INIT / RENDER =====
 function showSlide(index) {
