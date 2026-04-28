@@ -27,7 +27,7 @@ let currentSlide = 0;
 let gray = 100;
 
 // ===== INIT / RENDER =====
-function showSlide(index) {
+function showSlide(index, gray) {
   slides.forEach(slide => slide.classList.remove("active"));
   slides[index].classList.add("active");
 
@@ -46,29 +46,29 @@ function showSlide(index) {
 
   // Next hidden if no slide after
   nextBtn.classList.toggle("hidden", isLast);
+
+  slides[index].style.filter = "grayscale("+gray+"%)";
 }
 
 // ===== NAVIGATION =====
 function nextSlide() {
   if (currentSlide >= slides.length - 1) return;
   currentSlide++;
-  gray = gray + (100/slides.length);
-  slides[index].style.filter = grayscale(gray%);
-  showSlide(currentSlide);
+  gray -= 100/slides.length;
+  showSlide(currentSlide, gray);
 }
 
 function prevSlide() {
   if (currentSlide <= 0) return;
   currentSlide--;
-  gray = gray - (100/slides.length);
-  slides[index].style.filter = grayscale(gray%);
-  showSlide(currentSlide);
+  gray += 100/slides.length;
+  showSlide(currentSlide, gray);
 }
 
 function goHome() {
   currentSlide = 0;
-  slides[index].style.filter = grayscale(gray%);
-  showSlide(currentSlide);
+  gray = 100;
+  showSlide(currentSlide, gray);
 }
 
 // ===== BUTTON EVENTS =====
@@ -77,4 +77,4 @@ backBtn.addEventListener("click", prevSlide);
 homeBtn.addEventListener("click", goHome);
 
 // Show first slide on load (after everything is defined)
-showSlide(currentSlide);
+showSlide(currentSlide, gray);
