@@ -17,8 +17,8 @@ body {
 
 /* ===== SLIDE BASE ===== */
 .slide {
-  background-color: var(--primary);
-  color: var(--sub);
+  background-color: var(--secondary);
+  color: var(--primary);
   display: none;
   height: 100vh;
   box-sizing: border-box;
