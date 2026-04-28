@@ -17,6 +17,8 @@ body {
 
 /* ===== SLIDE BASE ===== */
 .slide {
+  background-color: var(--primary);
+  color: var(--sub);
   display: none;
   height: 100vh;
   box-sizing: border-box;
@@ -29,9 +31,7 @@ body {
 }
 
 /* ===== HOME SLIDE ===== */
-.home {
-  background-color: var(--back);
-  
+.home {  
   align-items: center;
   justify-content: center;
   gap: 4rem;
@@ -62,20 +62,17 @@ body {
 /* Typography */
 .home-subtitle {
   font-size: calc(1.2rem * var(--scale));
-  color: var(--secondary);
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
 .home-title {
   font-size: calc(2.8rem * var(--scale));
-  color: var(--primary);
   line-height: 1;
 }
 
 .home-author {
   font-size: calc(0.9rem * var(--scale));
-  color: var(--sub);
   margin-top: 0.5rem;
 }
 
@@ -85,9 +82,6 @@ h1, h2, p {
 
 /* ===== SLIDE 2 ===== */
 .slide-2 {
-  background-color: var(--sub);
-  color: var(--back);
-  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -107,9 +101,6 @@ h1, h2, p {
 
 /* ===== SLIDE 3 ===== */
 .slide-3 {
-  background-color: var(--primary);
-  color: var(--sub);
-  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -150,9 +141,6 @@ h1, h2, p {
 
 /* ===== SLIDE 4 ===== */
 .slide-4 {
-  background-color: var(--secondary);
-  color: var(--primary);
-  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -176,9 +164,6 @@ h1, h2, p {
 
 /* ===== SLIDE 5 ===== */
 .slide-5 {
-  background-color: var(--back);
-  color: var(--secondary);
-  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -202,9 +187,6 @@ h1, h2, p {
 
 /* ===== SLIDE 6 ===== */
 .slide-6 {
-  background-color: var(--primary);
-  color: var(--sub);
-  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -228,9 +210,6 @@ h1, h2, p {
 
 /* ===== SLIDE 7 ===== */
 .slide-7 {
-  background-color: var(--sub);
-  color: var(--back);
-  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -254,9 +233,6 @@ h1, h2, p {
 
 /* ===== SLIDE 8 ===== */
 .slide-8 {
-  background-color: var(--sub);
-  color: var(--back);
-  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -280,9 +256,6 @@ h1, h2, p {
 
 /* ===== SLIDE 7 ===== */
 .slide-9 {
-  background-color: var(--sub);
-  color: var(--back);
-  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -306,9 +279,6 @@ h1, h2, p {
 
 /* ===== SLIDE 7 ===== */
 .slide-10 {
-  background-color: var(--sub);
-  color: var(--back);
-  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -332,9 +302,6 @@ h1, h2, p {
 
 /* ===== SLIDE 7 ===== */
 .slide-11 {
-  background-color: var(--sub);
-  color: var(--back);
-  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -358,9 +325,6 @@ h1, h2, p {
 
 /* ===== SLIDE 7 ===== */
 .slide-12 {
-  background-color: var(--sub);
-  color: var(--back);
-  
   flex-direction: column;
   align-items: center;
   justify-content: center;
