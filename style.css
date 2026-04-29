@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
 :root {
@@ -14,6 +16,23 @@ body {
     --nav-btn-color: #000;
 }
 
+/* ===== PROGRESS BAR ===== */
+#progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 2000;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  transition: width 0.45s ease;
+}
 
 /* ===== SLIDE BASE ===== */
 .slide {
