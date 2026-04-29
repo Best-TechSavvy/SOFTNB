@@ -48,6 +48,11 @@ function showSlide(index, gray) {
   nextBtn.classList.toggle("hidden", isLast);
 
   slides[index].style.filter = "grayscale("+gray+"%)";
+
+  // ===== PROGRESS BAR UPDATE =====
+  const progressBar = document.getElementById("progress-bar");
+  const progressPercent = (index / (slides.length - 1)) * 100;
+  progressBar.style.width = `${progressPercent}%`;
 }
 
 // ===== NAVIGATION =====
