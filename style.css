@@ -34,6 +34,7 @@ body {
   transition: width 0.45s ease;
 }
 
+/* ===== SLIDE ANIMATION CORE ===== */
 /* ===== SLIDE BASE ===== */
 .slide {
   background-color: var(--secondary);
@@ -41,13 +42,35 @@ body {
   display: none;
   height: 100vh;
   box-sizing: border-box;
-  position: relative;
+
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* ===== SLIDE VISIBILITY ===== */
+/* Active slide */
 .slide.active {
   display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
+
+/* Off-screen positions */
+.slide.off-right {
+  transform: translateX(100%);
+}
+
+.slide.off-left {
+  transform: translateX(-100%);
+}
+
+/* On-screen position */
+.slide.center {
+  transform: translateX(0%);
+}
+
 
 /* ===== HOME SLIDE ===== */
 .home {  
