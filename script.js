@@ -6,6 +6,15 @@ const colorMap = {
   "rgb(90, 50, 181)": "rgb(14, 150, 127)"   // blue → green
 };
 
+// ===== SLIDE STATE =====
+const slides = document.querySelectorAll(".slide");
+const backBtn = document.getElementById("back");
+const nextBtn = document.getElementById("next");
+const homeBtn = document.getElementById("nav-home");
+
+let currentSlide = 0;
+let gray = 100;
+
 function updateButtonColor(slide) {
   const bgColor = getComputedStyle(slide).backgroundColor;
   const btnColor = colorMap[bgColor];
@@ -17,69 +26,116 @@ function updateButtonColor(slide) {
   );
 }
 
-// ===== SLIDE STATE =====
-const slides = document.querySelectorAll(".slide");
-const backBtn = document.getElementById("back");
-const nextBtn = document.getElementById("next");
-const homeBtn = document.getElementById("nav-home");
+function animateSlide(fromIndex, toIndex, direction) {
+  const current = slides[fromIndex];
+  const next = slides[toIndex];
 
-let currentSlide = 0;
-let gray = 100;
+  // Reset all slides
+  slides.forEach(slide => {
+    slide.classList.remove(
+      "active",
+      "center",
+      "off-left",
+      "off-right"
+    );
+  });
+
+  // Prepare starting positions
+  if (direction === "next") {
+    next.classList.add("off-right");
+    current.classList.add("center");
+  } else {
+    next.classList.add("off-left");
+    current.classList.add("center");
+  }
+
+  // Activate both
+  current.classList.add("active");
+  next.classList.add("active");
+
+  // Force browser reflow
+  void next.offsetWidth;
+
+  // Animate
+  if (direction === "next") {
+    current.classList.replace("center", "off-left");
+    next.classList.replace("off-right", "center");
+  } else {
+    current.classList.replace("center", "off-right");
+    next.classList.replace("off-left", "center");
+  }
+
+  // Cleanup after animation
+  setTimeout(() => {
+    current.classList.remove("active");
+    updateButtonColor(next);
+    updateUI(toIndex);
+  }, 600);
+}
 
 // ===== INIT / RENDER =====
-function showSlide(index, gray) {
-  slides.forEach(slide => slide.classList.remove("active"));
-  slides[index].classList.add("active");
-
-  // Update button color based on current slide background
-  updateButtonColor(slides[index]);
-
-  // ===== BUTTON VISIBILITY RULES =====
+function updateUI(index) {
   const isFirst = index === 0;
   const isLast = index === slides.length - 1;
 
-  // Home hidden on home slide
   homeBtn.classList.toggle("hidden", isFirst);
-
-  // Prev hidden if no slide before
   backBtn.classList.toggle("hidden", isFirst);
-
-  // Next hidden if no slide after
   nextBtn.classList.toggle("hidden", isLast);
 
-  slides[index].style.filter = "grayscale("+gray+"%)";
-
-  // ===== PROGRESS BAR UPDATE =====
   const progressBar = document.getElementById("progress-bar");
   const progressPercent = (index / (slides.length - 1)) * 100;
   progressBar.style.width = `${progressPercent}%`;
+
+  slides[index].style.filter = `grayscale(${gray}%)`;
 }
 
 // ===== NAVIGATION =====
 function nextSlide() {
   if (currentSlide >= slides.length - 1) return;
+
+  const prev = currentSlide;
   currentSlide++;
-  gray -= 100/slides.length;
-  showSlide(currentSlide, gray);
+  gray -= 100 / slides.length;
+
+  animateSlide(prev, currentSlide, "next");
 }
 
 function prevSlide() {
   if (currentSlide <= 0) return;
+
+  const prev = currentSlide;
   currentSlide--;
-  gray += 100/slides.length;
-  showSlide(currentSlide, gray);
+  gray += 100 / slides.length;
+
+  animateSlide(prev, currentSlide, "prev");
 }
 
 function goHome() {
-  currentSlide = 0;
-  gray = 100;
-  showSlide(currentSlide, gray);
-}
+  if (currentSlide === 0) return;
 
+  function step() {
+    if (currentSlide === 0) return;
+
+    const prev = currentSlide;
+    currentSlide--;
+    gray += 100 / slides.length;
+
+    animateSlide(prev, currentSlide, "prev");
+
+    setTimeout(step, 620);
+  }
+  step();
+}
 // ===== BUTTON EVENTS =====
 nextBtn.addEventListener("click", nextSlide);
 backBtn.addEventListener("click", prevSlide);
 homeBtn.addEventListener("click", goHome);
 
 // Show first slide on load (after everything is defined)
-showSlide(currentSlide, gray);
+slides.forEach((slide, i) => {
+  slide.classList.add(i === 0 ? "active" : "off-right");
+});
+slides[0].classList.add("center");
+
+updateUI(0);
+updateButtonColor(slides[0]);
