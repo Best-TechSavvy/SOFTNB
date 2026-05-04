@@ -283,6 +283,25 @@ h1, h2, p {
   padding: 5rem;
 }
 
+.slide-8-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.slide-8-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.slide-8-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .slide-8 h1 {
   font-size: calc(2.5rem * var(--scale));
 }
@@ -292,7 +311,7 @@ h1, h2, p {
 }
 
 .slide-8 p {
-  font-size: calc(1.1rem * var(--scale));
+  font-size: calc(0.9rem * var(--scale));
   opacity: 0.8;
 }
 
@@ -306,6 +325,25 @@ h1, h2, p {
   padding: 5rem;
 }
 
+.slide-9-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.slide-9-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.slide-9-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .slide-9 h1 {
   font-size: calc(2.5rem * var(--scale));
 }
@@ -315,7 +353,7 @@ h1, h2, p {
 }
 
 .slide-9 p {
-  font-size: calc(1.1rem * var(--scale));
+  font-size: calc(0.85rem * var(--scale));
   opacity: 0.8;
 }
 
